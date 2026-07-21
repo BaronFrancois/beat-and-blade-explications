@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Beat & Blade - Mewo Dev Challenge</title>
+    <meta
+      name="description"
+      content="Beat & Blade est un jeu de rythme medieval jouable dans Reddit. Battez le champion de la semaine, prenez la couronne et laissez la communaute choisir le prochain boss."
+    />
+    <meta property="og:title" content="Beat & Blade - Mewo Dev Challenge" />
+    <meta
+      property="og:description"
+      content="Un jeu de rythme medieval construit pour Reddit : un boss hebdomadaire, un classement, une couronne."
+    />
+    <meta property="og:image" content="assets/launch-post-card-1200x630.webp" />
+    <meta name="theme-color" content="#111722" />
+    <link rel="icon" href="assets/community-icon-1024.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Navigation du projet">
+      <a class="brand" href="#top" aria-label="Accueil Beat & Blade">
+        <img src="assets/community-icon-1024.png" alt="" />
+        <span>Beat & Blade</span>
+      </a>
+      <nav>
+        <a href="#trailer">Bande-annonce</a>
+        <a href="#hook">Boucle Reddit</a>
+        <a href="#tech">Tech</a>
+        <a href="#links">Liens</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Candidature Mewo Dev Challenge</p>
+          <h1 id="hero-title">Une joute de rythme medievale dans Reddit</h1>
+          <p class="hero-lead">
+            Affrontez le champion de la semaine, frappez les notes en rythme, prenez la couronne
+            et laissez un decret royal aux prochains challengers.
+          </p>
+          <div class="actions" aria-label="Liens principaux">
+            <a class="button primary" href="#trailer">Voir la bande-annonce</a>
+            <a class="button" href="https://github.com/BaronFrancois/beatAndBlade">Voir le repo GitHub</a>
+            <a class="button" href="https://www.reddit.com/r/beatandblade_dev/comments/1ugnkwk/beatandblade/">Jouer sur Reddit</a>
+          </div>
+        </div>
+        <figure class="hero-art">
+          <img src="assets/launch-post-card-1200x630.webp" alt="Illustration de duel medieval Beat & Blade" />
+        </figure>
+      </section>
+
+      <section class="banner-strip" aria-label="Banniere enluminure medievale">
+        <img src="assets/community-banner-inspired-4000x192.png" alt="" />
+      </section>
+
+      <section class="section video-section" id="trailer" aria-labelledby="trailer-title">
+        <div class="section-heading">
+          <p class="eyebrow">Bande-annonce</p>
+          <h2 id="trailer-title">Voir la joute en mouvement</h2>
+          <p>
+            La video montre la boucle principale : entrer dans le duel, lire le rythme, survivre au
+            boss et viser la couronne hebdomadaire.
+          </p>
+        </div>
+        <a class="video-frame video-link" href="https://www.youtube.com/watch?v=hzikl9DjNlU" aria-label="Regarder la bande-annonce Beat & Blade sur YouTube">
+          <img src="assets/launch-post-card-1200x630.webp" alt="Apercu de la bande-annonce Beat & Blade" />
+          <span class="play-badge">Regarder la video sur YouTube</span>
+        </a>
+      </section>
+
+      <section class="section split" id="hook" aria-labelledby="hook-title">
+        <div class="section-heading">
+          <p class="eyebrow">Boucle native Reddit</p>
+          <h2 id="hook-title">Une chanson. Un champion. Une couronne.</h2>
+          <p>
+            Beat & Blade utilise le subreddit comme une partie du jeu, pas seulement comme un endroit
+            ou publier un post. Le defi hebdomadaire donne une cible commune a toute la communaute.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <h3>Defi du Roi hebdomadaire</h3>
+            <p>Un champ de bataille definit la semaine. Battez le score du champion et la couronne change de main.</p>
+          </article>
+          <article>
+            <h3>Decret royal</h3>
+            <p>Le champion peut ecrire une courte proclamation visible par les prochains challengers.</p>
+          </article>
+          <article>
+            <h3>Vote communautaire</h3>
+            <p>Les joueurs votent entre plusieurs morceaux candidats pour choisir le prochain boss.</p>
+          </article>
+          <article>
+            <h3>Recapitulatif automatise</h3>
+            <p>Des posts programmes couronnent le vainqueur, affichent le classement final et annoncent le prochain defi.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section manuscript" aria-labelledby="gameplay-title">
+        <div>
+          <p class="eyebrow">Gameplay</p>
+          <h2 id="gameplay-title">Un combat rythmique a quatre directions</h2>
+        </div>
+        <div class="rules">
+          <p>
+            Les notes arrivent dans quatre directions : gauche, haut, bas et droite. Le timing construit
+            le score, le combo, la charge de soin et le rang final. Les erreurs coutent des coeurs.
+          </p>
+          <p>
+            Le jeu se cale sur l'horloge Web Audio, afin que le jugement suive la musique plutot que
+            le nombre d'images par seconde. Desktop et mobile ont des layouts separes, adaptes aux
+            contraintes du webview Reddit.
+          </p>
+        </div>
+      </section>
+
+      <section class="section tech" id="tech" aria-labelledby="tech-title">
+        <div class="section-heading">
+          <p class="eyebrow">Construction</p>
+          <h2 id="tech-title">Stack technique</h2>
+        </div>
+        <ul class="tech-list">
+          <li><span>Devvit Web</span>Experience jouable dans un post Reddit</li>
+          <li><span>Phaser 4</span>Client de combat rythmique</li>
+          <li><span>TypeScript + Vite</span>Application et pipeline de build</li>
+          <li><span>Hono</span>Routes serveur</li>
+          <li><span>Redis</span>Classements, votes, series, titres, decrets</li>
+          <li><span>Web Audio API</span>Timing musical et jugement</li>
+        </ul>
+      </section>
+
+      <section class="section split challenges" aria-labelledby="challenges-title">
+        <div class="section-heading">
+          <p class="eyebrow">Difficultes</p>
+          <h2 id="challenges-title">Construit autour des contraintes Reddit</h2>
+          <p>
+            Les points les plus durs n'etaient pas decoratifs : lisibilite mobile, temps de chargement,
+            demarrage audio et jugements rythmiques coherents entre appareils.
+          </p>
+        </div>
+        <div class="challenge-list">
+          <p>Reduction du premier chargement et report des assets non essentiels apres la musique du menu.</p>
+          <p>Creation d'un layout portrait dedie au combat, plutot qu'une simple reduction de la vue desktop.</p>
+          <p>Synchronisation du gameplay sur le temps audio, pas sur le temps de rendu.</p>
+          <p>Concentration de la candidature sur le mode competitif hebdomadaire pour garder un hook clair.</p>
+        </div>
+      </section>
+
+      <section class="section links-section" id="links" aria-labelledby="links-title">
+        <div class="section-heading">
+          <p class="eyebrow">Liens de candidature</p>
+          <h2 id="links-title">Materiel du projet</h2>
+        </div>
+        <div class="link-grid">
+          <a href="https://github.com/BaronFrancois/beatAndBlade">
+            <span>Repository</span>
+            github.com/BaronFrancois/beatAndBlade
+          </a>
+          <a href="https://www.reddit.com/r/beatandblade_dev/comments/1ugnkwk/beatandblade/">
+            <span>Post Reddit jouable</span>
+            r/beatandblade_dev
+          </a>
+          <a href="https://www.youtube.com/watch?v=hzikl9DjNlU">
+            <span>Bande-annonce</span>
+            YouTube
+          </a>
+          <a href="mewo-dev-challenge-pitch.pdf">
+            <span>Pitch PDF</span>
+            Telecharger la presentation
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Beat & Blade - combat rythmique medieval pour Reddit.</p>
+    </footer>
+  </body>
+</html>
